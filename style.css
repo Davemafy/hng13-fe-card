@@ -25,9 +25,9 @@ body {
   font-family: "DM Sans";
   background-image: url("img/wave.svg");
   background-repeat: no-repeat;
-  background-position: 0 98%;
+  background-position: 0 100%;
   font-style: normal;
-  min-height: 100vh;
+  height: 100vh;
   padding-block: 1rem;
   display: flex;
   justify-content: center;
@@ -118,7 +118,7 @@ h2 {
   /* border-radius: 10rem; */
    border: 4px solid #00000023;
 
-  filter: brightness(200%) saturate(3) contrast(1.3)  sepia();
+  filter: brightness(160%) saturate(0) contrast(1.03)  sepia();
   border-radius: 10rem;
 }
 
