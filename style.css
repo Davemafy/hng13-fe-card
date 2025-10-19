@@ -144,6 +144,11 @@ h2 {
   padding-right: 0.1rem;
   border-radius: .3rem;
   opacity: 0.97;
+    user-select: none;
+  /* For older browser compatibility, consider adding vendor prefixes: */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;  
 
 }
 
@@ -163,6 +168,12 @@ h2 {
   flex-direction: column;
   gap: 0.75rem;
   padding-bottom: 0.5rem;
+    user-select: none;
+  /* For older browser compatibility, consider adding vendor prefixes: */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;  
+  
 }
 
 
@@ -182,6 +193,7 @@ li {
   color: #4f2b6b;
   font-family: "BBH Sans";
   letter-spacing: 1px;
+  
 
   background-color:	#f7d1ec;
    border: 2px solid #171718a4;
@@ -205,6 +217,11 @@ li:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
+    user-select: none;
+  /* For older browser compatibility, consider adding vendor prefixes: */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;  
 }
 
 a {
