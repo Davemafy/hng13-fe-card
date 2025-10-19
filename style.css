@@ -1,7 +1,17 @@
 @font-face {
   font-family: "DM Sans";
-  src: url("fonts/DMSans-Variable.ttf") format("woff");
-  font-style: normal;
+  src: url("fonts/DMSans-Variable.ttf");
+}
+
+@font-face {
+  font-family: "BBH Sans";
+  src: url("fonts/BBHSansHegarty-Regular.ttf");
+}
+
+@font-face {
+  font-family: "system-ui";
+  src: local(system-ui);
+  font-style: italic;
 }
 
 * {
@@ -10,83 +20,182 @@
   box-sizing: border-box;
   /* border: 1px solid; */
 }
+
 body {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "DM Sans";
+  background-image: url("img/wave.svg");
+  background-repeat: no-repeat;
+  background-position: 0 98%;
   font-style: normal;
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  padding-block: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1.5;
+  background-color: #f31c1c;
+  /* opacity: 0; */
+}
+
+.bg-pattern {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  
 }
 
 article {
-    min-width: min-content;
-  max-width: 30ch;
+  width: min(90%, 25rem);
   border-radius: 1rem;
   padding: 1.5rem;
-  background: #fff;
-  background: url("img/pattern.png");
-  background-repeat: repeat;
-  background-size: 30px 30px;
-  border: 1px solid;
-  box-shadow: 10px 10px #100816;
-  display: grid;
+  box-shadow: 0px 0px 0px 0.2rem  #f8c488;
+
+  background-color: #ff9a27;
+  display: flex;
+  flex-direction: column;
   place-content: center;
+  position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
+article::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: 40px;
+  background-position: -4% -4%;
+  /* animation: turn 1s ; */
+}
+
+@keyframes turn {
+  to {
+    scale: 0;
+    rotate: 360deg;
+    opacity: 0;
+  }
+}
 
 .user-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem;
+  padding-bottom: 0rem;
+  margin: -1.5rem;
+  margin-bottom: 0rem;
+  position: relative;
 }
 
 .name {
-    font-weight: 700;
-    line-height: 1.2;
+  font-family: "BBH Sans";
+  font-weight: 300;
+  color: #171718c5;
+  font-size: min( 9vw ,2.2rem);
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
-
 
 .avatar-wrapper {
   display: flex;
+  height: 100%;
+  justify-content: center;
   align-items: center;
 }
 
-
 .avatar {
-  height: 90px;
+  width: 5rem;
+  aspect-ratio: 1/1;
+
+
+  /* border-radius: 10rem; */
+   border: 4px solid #00000023;
+
+  filter: brightness(200%) saturate(3) contrast(1.3)  sepia();
   border-radius: 10rem;
-  border: 4px solid #00000023;
 }
 
-
 .bio {
-  margin: 1rem 0;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-weight: 300;
+  margin-block: 1rem 0.5rem;
+  margin-left: -0.5rem;
 }
 
 .time {
-  font-weight: 600;
+  font-weight: 400;
+  width: min-content;
+  min-width: min-content;
   margin-bottom: 1rem;
+  font-size: 0.75rem;
+  background: #171718a4;
+  color: #ff9a27;
+  padding: 0.1rem 0.2rem;
+  padding-right: 0.1rem;
+  border-radius: .3rem;
+  opacity: 0.97;
+
 }
+
 .time span {
-  font-weight: 300;
+    background: #ff9a27;
+  color: rgba(255, 255, 255, 0.651);
+  color: #171718a4;
+  padding: 0.1rem 0.3rem;
+  font-family: "BBH Sans";
+
+  border-radius: .3rem;
+
 }
 
 .preferences {
   display: flex;
-  gap: 1rem;
-  align-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 li {
   list-style-position: inside;
-  font-size: 0.9rem;
+  list-style: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  color: #4f2b6b;
+  font-family: "BBH Sans";
+  letter-spacing: 1px;
+
+  background-color:	#f7d1ec;
+   border: 2px solid #171718a4;
+    background: #ff9a27;
+  color: #171718a4;
+  padding: 0.1rem 0.3rem;
+  border-radius: .3rem;
+
+}
+
+li:hover {
+  color: #ff9a27;
+  background: #171718a4;
+  border-color: #523b21;
 }
 
 
@@ -101,12 +210,12 @@ li {
 a {
   display: flex;
   align-items: center;
+  color: inherit;
+  text-decoration: none;
 }
+
+
 
 .user-links img {
-  height: 1.2rem;
+  height: 1rem;
 }
-
-
-
-
