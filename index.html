@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article data-testid="test-profile-card">
+      <section class="user-info">
+        <h1 class="name" data-testid="test-user-name">
+          David <br />
+          Imafidon
+        </h1>
+        <figure class="avatar-wrapper">
+          <img
+            data-testid="test-user-avatar"
+            class="avatar"
+            src="img/me.png"
+            alt="A picture of david smiling"
+          />
+        </figure>
+      </section>
+      <p class="bio" data-testid="test-user-bio">
+        I am a frontend developer with strong attention to detail. Over the
+        years, I’ve acquired skills in crafting visual and intuitive interfaces
+        focused on accessibility and excellent user experience (UX).
+      </p>
+      <p class="time">
+        Current Time: <span data-testid="test-user-time"></span>
+      </p>
+      <section class="preferences">
+        <div>
+          <h2>Hobbies</h2>
+          <ul data-testid="test-user-hobbies">
+            <li>Coding</li>
+            <li>Writing</li>
+            <li>Networking</li>
+            <li>Learning</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Dislikes</h2>
+          <ul data-testid="test-user-dislikes">
+            <li>Onions</li>
+            <li>Procatination</li>
+            <li>Thanos</li>
+            <li>Low battery</li>
+          </ul>
+        </div>
+      </section>
+      <nav class="user-links" data-testid="test-user-social-links">
+        <a
+          target="_blank"
+          rel="noreferrer
+          noopener"
+          href="https://www.facebook.com/david.imafidon.2025/"
+          ><img
+            data-testid="test-user-social-facebook"
+            src="img/facebook.svg"
+            alt="facebook icon"
+        /></a>
+        <a
+          target="_blank"
+          rel="noreferrer
+          noopener"
+          href="https://www.linkedin.com/in/david-imafidon/"
+        >
+          <img
+            data-testid="test-user-social-likedin"
+            src="img/likedin.svg"
+            alt="likedin icon"
+        /></a>
+        <a
+          target="_blank"
+          rel="noreferrer
+          noopener"
+          href="https://github.com/Davemafy/"
+          ><img
+            data-testid="test-user-social-github"
+            src="img/github.svg"
+            alt="github icon"
+        /></a>
+      </nav>
+    </article>
+    <script src="script.js"></script>
+  </body>
+</html>

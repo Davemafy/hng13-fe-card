@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("fonts/DMSans-Variable.ttf") format("woff");
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid; */
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+    min-width: min-content;
+  max-width: 30ch;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  background: url("img/pattern.png");
+  background-repeat: repeat;
+  background-size: 30px 30px;
+  border: 1px solid;
+  box-shadow: 10px 10px #100816;
+  display: grid;
+  place-content: center;
+}
+
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+.avatar {
+  height: 90px;
+  border-radius: 10rem;
+  border: 4px solid #00000023;
+}
+
+
+.bio {
+  margin: 1rem 0;
+}
+
+.time {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.time span {
+  font-weight: 300;
+}
+
+.preferences {
+  display: flex;
+  gap: 1rem;
+  align-content: center;
+}
+
+li {
+  list-style-position: inside;
+  font-size: 0.9rem;
+}
+
+
+
+.user-links {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+a {
+  display: flex;
+  align-items: center;
+}
+
+.user-links img {
+  height: 1.2rem;
+}
+
+
+
+
